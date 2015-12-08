@@ -4,12 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace devCodeCampExtendedMath
 {
-    class Program
+    public class Math
     {
-        static void Main(string[] args)
+        public static void Main()
         {
+            Roman roman = new Roman();
+            HappyNumber hn = new HappyNumber();
+            hn.printHappyNumbers(50);
+
+            Console.WriteLine(Roman.goingRoman(563));
+            Console.WriteLine(Euclidean.getGCD(489, 36));
+            Console.ReadLine();
         }
     }
 }
