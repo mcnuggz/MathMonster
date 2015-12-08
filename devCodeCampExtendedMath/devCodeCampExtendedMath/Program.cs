@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace devCodeCampExtendedMath
 {
-    public class Math
+    public class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            Roman roman = new Roman();
-            Polyhedral polyhedral = new Polyhedral();
-            Euclidean gcd = new Euclidean();
+            Console.WriteLine("Enter a number to find its GCD:");
+            int gcd1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter another number to find its GCD:");
+            int gcd2 = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter how many faces the shape has: ");
             int faces = Convert.ToInt32(Console.ReadLine());
@@ -22,20 +23,20 @@ namespace devCodeCampExtendedMath
             Console.WriteLine("Enter how many edges the shape has: ");
             int edges = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("What number would you like to Romanize?" );
+            Console.WriteLine("What number would you like to Romanize?");
             int romanInput = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter a number to find its GCD:");
-            int gcd1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter another number to find its GCD:");
-            int gcd2 = Convert.ToInt32(Console.ReadLine());
 
-            
+            Console.WriteLine("How many happy numbers do you want?: ");
+            int happiness = Convert.ToInt32(Console.ReadLine());
 
-            Euclidean.getGCD(gcd1, gcd2);
-            Polyhedral.polyhedral(ref vertices, ref edges, ref faces);
-            Roman.goingRoman(ref romanInput);
+
+            Math.getGCD(gcd1, gcd2);
+            Math.polyhedral(ref vertices, ref edges, ref faces);
+            Math.goingRoman(ref romanInput);
+            Math.isHappy(happiness);
             Console.ReadLine();
         }
+
     }
 }
