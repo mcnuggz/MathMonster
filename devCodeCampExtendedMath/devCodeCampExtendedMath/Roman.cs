@@ -8,7 +8,7 @@ namespace devCodeCampExtendedMath
 {
     public class Roman
     {
-        public static string goingRoman(int number)
+        public static void goingRoman(ref int number)
         {
             StringBuilder result = new StringBuilder();
             int[] digits = { 1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000 };
@@ -23,7 +23,7 @@ namespace devCodeCampExtendedMath
                         break;
                     }
             }
-            return result.ToString();
+            Console.WriteLine(result.ToString());
         }
     }
 }
